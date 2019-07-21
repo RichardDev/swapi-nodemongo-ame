@@ -13,6 +13,20 @@ npm run start.
 Para rodar os testes funcionais da api rode o comando:
 npm run test.
 
+O projeto é executado em : localhost:3000
+Para executar os endpoints recomendo utilizar: https://www.getpostman.com/
+Endpoints:
+Buscar planetas
+GET localhost:3000/planetas
+Buscar planetas por nome
+GET localhost:3000/planetas/nome/:nome
+Buscar planetas por id
+GET localhost:3000/planetas/id/:id
+Cadastrar planeta
+POST localhost:3000/criar
+Remover planeta por id
+DELETE localhost:3000/remover/id
+
 May the force be with you.
 
 
