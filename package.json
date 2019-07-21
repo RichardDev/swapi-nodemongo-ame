@@ -1,0 +1,31 @@
+{
+  "name": "swapi_node_mongo_planets",
+  "version": "1.0.0",
+  "description": "api planetas starwars em node e mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --timeout 5000 test/**/*.js --exit",
+    "start": "NODE_ENV=prod nodemon index.js"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "node",
+    "express"
+  ],
+  "author": "Richard Garcia",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.15.2",
+    "mongojs": "^2.6.0",
+    "mongoose": "^4.9.1",
+    "swapi-node": "^0.4.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.0"
+  }
+}
