@@ -7,7 +7,7 @@ MongoDB: Para este teste não vai ser necessário instalar o mongodb, pois estou
 
 Após a instalação do nodejs, basta instalar as dependências npm install.
 
-Para rodar e executar o projeto após a instalação das depenências basta executar:
+Para rodar e executar o projeto após a instalação das dependências basta executar:
 npm run start.
 
 Para rodar os testes funcionais da api rode o comando:
