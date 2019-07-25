@@ -19,7 +19,7 @@ describe('Planetas', function() {
     describe('/GET planetas', function () {
         it('Retornam os planetas cadastrados', function(done) {
             chai.request(app)
-            .get('/planetas')
+            .get('/listar')
             .end((err, res) => {
                 res.should.have.status(200);
                 res.body.should.be.a('array');                
@@ -28,29 +28,29 @@ describe('Planetas', function() {
         });
     });
 
-    describe('POST criar', function() {
-        it('Criar um planeta', function(done) {
+    describe('POST adicionar', function() {
+        it('Adicionar um planeta', function(done) {
             let planeta = {
                 nome: "Alderaan",
                 clima: "temperate",
                 terreno: "grasslands, mountains"
             };
             chai.request(app)
-            .post('/criar')
+            .post('/adicionar')
             .send(planeta)
             .end((err, res) => {
-                res.should.have.status(200);
+                res.should.have.status(201);
                 res.body.should.have.property('nome');
                 res.body.should.have.property('clima');
                 res.body.should.have.property('terreno');
                 res.body.should.have.property('numero_filmes');
-                done();
+                //done();                
             });
-
+            done();            
         });
     });
 
-    describe('GET planeta/:nome', function() {
+    describe('GET buscar/:nome', function() {
         it('Buscar um planeta pelo nome', function(done){
             let PlanetaModel = app.models.PlanetaModel;
             let planeta = new PlanetaModel({
@@ -61,7 +61,7 @@ describe('Planetas', function() {
             });
             planeta.save((err, planeta) => {                
                 chai.request(app)
-                .get('/planetas/nome/' + planeta.nome)
+                .get('/buscar/nome/' + planeta.nome)
                 .send(planeta)
                 .end((err, res) => {                    
                     res.should.have.status(200);
@@ -75,7 +75,7 @@ describe('Planetas', function() {
         });
     });
 
-    describe('GET planeta/:id', function() {
+    describe('GET buscar/:id', function() {
         it('Buscar um planeta pelo id', function(done){
             let PlanetaModel = app.models.PlanetaModel;
             let planeta = new PlanetaModel({
@@ -86,7 +86,7 @@ describe('Planetas', function() {
             });
             planeta.save((err, planeta) => {                
                 chai.request(app)
-                .get('/planetas/id/' + planeta.id)
+                .get('/buscar/id/' + planeta.id)
                 .send(planeta)
                 .end((err, res) => {                    
                     res.should.have.status(200);                    
