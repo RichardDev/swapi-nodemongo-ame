@@ -8,7 +8,7 @@ Requisitos: Linux
 Requisitos: Instalar o nodejs >= 10
 MongoDB: Para este teste não vai ser necessário instalar o mongodb, pois estou utilizando o serviço free https://mlab.com/
 
-Após a instalação do nodejs, basta instalar as dependências npm install.
+Após a instalação do nodejs, basta instalar as dependências com: npm install.
 
 Para rodar e executar o projeto após a instalação das dependências basta executar:
 npm run start.
