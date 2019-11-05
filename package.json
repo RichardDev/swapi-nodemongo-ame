@@ -21,7 +21,7 @@
     "express": "^4.15.2",
     "express-validator": "^2.20.8",
     "mongojs": "^2.6.0",
-    "mongoose": "^4.9.1",
+    "mongoose": "^5.7.8",
     "morgan": "^1.9.1",
     "swapi-node": "^0.4.4",
     "winston": "^3.2.1"
